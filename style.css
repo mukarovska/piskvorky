@@ -3,9 +3,11 @@
   margin: 0;
 }
 
-body {
+.gradient {
   background: linear-gradient(0deg, rgba(255, 200, 218, 1), rgba(97, 93, 173, 1));
   background-repeat: no-repeat;
+
+  height: 100vh;
   padding: 20px;
 }
 
