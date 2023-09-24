@@ -8,7 +8,8 @@
 .gradient {
   background: linear-gradient(0deg, rgba(255, 200, 218, 1), rgba(97, 93, 173, 1));
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   padding: 20px;
 }
 
@@ -44,7 +45,7 @@
 .heading--game {
   font-size: 50px;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .button {
@@ -82,6 +83,7 @@
 
 .game {
   max-width: 80vmin;
+  height: 100vh;
   margin: 0 auto;
 }
 
@@ -116,4 +118,27 @@
 
 .navigation__text {
   text-transform: uppercase;
+  font-size: 20px;
+}
+
+.navigation__icone {
+  width: 20px;
+}
+
+.game__board {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  border: 1.5px solid rgb(80, 80, 80);
+  margin-top: 20px;
+}
+
+.game__array {
+  border: 1.5px solid rgb(80, 80, 80);
+  aspect-ratio: 1;
+  padding: 0;
+  background-color: hsla(0, 0%, 100%, 0.432);
+}
+
+.game__array:hover {
+  background-color: hsla(0, 0%, 100%, 0.616);
 }
