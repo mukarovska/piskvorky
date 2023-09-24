@@ -1,12 +1,13 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
 }
 
 .gradient {
   background: linear-gradient(0deg, rgba(255, 200, 218, 1), rgba(97, 93, 173, 1));
   background-repeat: no-repeat;
-
   height: 100vh;
   padding: 20px;
 }
@@ -17,8 +18,6 @@
   background-color: #283e50;
   border-radius: 10px 10px 0 0;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  color: #ffffff;
   font-size: 19px;
 }
 
@@ -31,22 +30,39 @@
   padding: 20px 20px 30px 20px;
 }
 
-.card__heading {
+.heading {
+  color: white;
   font-family: 'Lobster', cursive;
   font-weight: lighter;
+}
+
+.heading--index {
   font-size: 52px;
   margin-bottom: 30px;
 }
 
+.heading--game {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .button {
-  display: block;
-  padding: 20px;
+
   color: #ffffff;
   text-decoration: none;
 }
 
+.button--block {
+  display: block;
+  padding: 20px;
+}
+
 .button--primary {
   background-color: #1fcca4;
+}
+
+.button--block.button--primary {
   margin-bottom: 1.5px;
 }
 
@@ -62,4 +78,42 @@
 .button--secondary:hover {
   background-color: #0090e9;
   cursor: pointer;
+}
+
+.game {
+  max-width: 80vmin;
+  margin: 0 auto;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation__player {
+  display: flex;
+  gap: 5px;
+}
+
+.navigation__buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.button--square {
+  height: 35px;
+  width: 35px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button__icone {
+  width: 60%;
+}
+
+.navigation__text {
+  text-transform: uppercase;
 }
