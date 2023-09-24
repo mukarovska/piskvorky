@@ -139,6 +139,8 @@
   background-color: hsla(0, 0%, 100%, 0.432);
 }
 
+.game__array:focus,
 .game__array:hover {
   background-color: hsla(0, 0%, 100%, 0.616);
+  cursor: pointer;
 }
