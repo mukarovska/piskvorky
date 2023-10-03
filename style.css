@@ -144,3 +144,11 @@
   background-color: hsla(0, 0%, 100%, 0.616);
   cursor: pointer;
 }
+
+.board__field--circle {
+  background-image: url(images/circle-black.svg);
+}
+
+.board__field--cross {
+  background-image: url(images/cross-black.svg);
+}
