@@ -1,3 +1,5 @@
+import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4'
+
 let currentPlayer = 'circle'
 const navigationIconeElement = document.querySelector('.navigation__icone')
 
@@ -23,16 +25,13 @@ const playerFunction = (event) => {
   }
 }
 
-document.querySelector('.game__array:nth-child(1)').addEventListener('click', playerFunction)
-document.querySelector('.game__array:nth-child(2)').addEventListener('click', playerFunction)
-document.querySelector('.game__array:nth-child(3)').addEventListener('click', playerFunction)
-document.querySelector('.game__array:nth-child(4)').addEventListener('click', playerFunction)
-document.querySelector('.game__array:nth-child(5)').addEventListener('click', playerFunction)
-document.querySelector('.game__array:nth-child(6)').addEventListener('click', playerFunction)
-document.querySelector('.game__array:nth-child(7)').addEventListener('click', playerFunction)
-document.querySelector('.game__array:nth-child(8)').addEventListener('click', playerFunction)
-document.querySelector('.game__array:nth-child(9)').addEventListener('click', playerFunction)
-document.querySelector('.game__array:nth-child(10)').addEventListener('click', playerFunction)
+const allArray = document.querySelectorAll('.game__array')
+allArray.forEach((array) => {
+  array.addEventListener('click', playerFunction)
+})
+
+console.log(allArray)
+
 
 
 
