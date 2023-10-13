@@ -23,15 +23,45 @@ const playerFunction = (event) => {
     navigationIconeElement.src = 'images/circle.svg'
     event.target.disabled = true
   }
+
+  evaluation()
 }
 
-const allArray = document.querySelectorAll('.game__array')
-allArray.forEach((array) => {
+const gameArrays = document.querySelectorAll('.game__array')
+gameArrays.forEach((array) => {
   array.addEventListener('click', playerFunction)
 })
 
-console.log(allArray)
 
-
-
-
+const evaluation = () => {
+  let gameField = []
+  gameArrays.forEach((array) => {
+    if (array.classList.contains('board__field--circle')) {
+      gameField.push('o')
+    } else if (array.classList.contains('board__field--cross')) {
+      gameField.push('x')
+    } else {
+      gameField.push('_')
+    }
+  })
+  console.log(gameField)
+  const winner = findWinner(gameField)
+  console.log('winner', winner)
+  
+  if (winner === 'o') {
+    setTimeout(() => {
+      alert('Vyhrálo kolečko!')
+      location.reload()
+    }, 500)
+  } else if (winner === 'x') {
+    setTimeout(() => {
+      alert('Vyhrál křížek!')
+      location.reload()
+    }, 500)
+  } else if (winner === 'tie') {
+    setTimeout(() => {
+      alert('Hra skončila remízou!')
+      location.reload()
+    }, 500)
+  }
+}
